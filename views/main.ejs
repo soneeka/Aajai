@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<htm>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Aaja</title>
+     <link rel="shortcut icon" href="./images/logoicon.ico" />
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-with-button-logo.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+    .image img{
+        width: 100%;
+        height: 42em;
+     }
+     .text-center a {
+             padding: 6px 8px 6px 16px;
+             text-decoration: none;
+             font-size: 20px;
+             color: #1ab2ba;
+             display: block;
+
+         }
+      .text-center a:hover {
+                 color: black;
+             }
+     .logo-holder{
+          position: absolute;
+          height: 40%;
+          width: 100%;
+          top: 25%;
+
+          display: inline-block;
+
+          overflow:hidden;
+          font-size: 17px;
+          color:white;
+          background-color: rgba(106, 108, 112,0.5);
+          z-index: 20;
+
+          padding: 1em;
+          font-weight: bold;
+        }
+
+              .card-container.card {
+              position: relative;
+              margin-top:30px;
+              margin-left: 0px;
+                max-width: 400px;
+                max-height: 450px;
+                padding: 30px 30px;
+
+            }
+
+            .btn {
+                font-weight: 700;
+                height: 36px;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                user-select: none;
+                cursor: default;
+            }
+
+            /*   * Card component      */
+            .card {
+                background-color: transparent;
+                /* just in case there no content*/
+               /* padding: 10px 25px 30px;*/
+                margin: 0 auto 25px;
+                margin-top: 50px;
+                margin-left: 10px;
+                font-size: 20px;
+                font-family: Times New Roman;
+                /* shadows and rounded borders */
+                -moz-border-radius: 2px;
+                -webkit-border-radius: 2px;
+                border-radius: 2px;
+                -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+                -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
+
+            }
+
+            .profile-img-card {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 10px;
+            display: block;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            }
+
+            /*
+             * Form styles
+             */
+            .profile-name-card {
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                margin: 10px 0 0;
+                min-height: 1em;
+            }
+
+            .form-signin #inputEmail,
+            .form-signin #inputPassword {
+                direction: ltr;
+                height: 44px;
+                font-size: 16px;
+            }
+
+            .form-signin input[type=email],
+            .form-signin input[type=password],
+            .form-signin input[type=text],
+            .form-signin button {
+                width: 100%;
+                display: block;
+                margin-bottom: 10px;
+                z-index: 1;
+                position: relative;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .form-signin .form-control:focus {
+                border-color: rgb(104, 145, 162);
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+            }
+
+            .btn.btn-signin {
+                /*background-color: #4d90fe; */
+                background-color: rgb(12, 97, 33);
+                /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+                padding: 0px;
+                font-weight: 700;
+                font-size: 14px;
+                height: 36px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                border: none;
+                -o-transition: all 0.218s;
+                -moz-transition: all 0.218s;
+                -webkit-transition: all 0.218s;
+                transition: all 0.218s;
+            }
+
+            .btn.btn-signin:hover,
+            .btn.btn-signin:active,
+            .btn.btn-signin:focus{
+              background-color: #1e88e5;
+            }
+
+            .container-f{
+              background-color: #263238;
+               height: 100px; margin-top: -20px;
+              }
+
+          /**************css for footer********/
+          #myFooter {
+          background-color: #698c27;/*#3c3d41;*/
+          color: white;
+          padding-top: -3px;
+      }
+
+      #myFooter .footer-copyright {
+          background-color: #C45033;
+          padding-top: 1px;
+          padding-bottom: 1px;
+          text-align: center;
+      }
+
+      #myFooter .row {
+          margin-bottom: -8px;
+      }
+
+      #myFooter .navbar-brand {
+          margin-top: 20px;
+          height: 65px;
+      }
+
+      #myFooter .footer-copyright p {
+          margin: 5px;
+          color: #ccc;
+      }
+
+      #myFooter ul {
+          list-style-type: none;
+          padding-left: 0;
+          line-height: 1.7;
+      }
+
+      #myFooter h5 {
+          font-size: 18px;
+          color: white;
+          font-weight: bold;
+          margin-top: 30px;
+      }
+
+      #myFooter h2 a{
+          font-size: 50px;
+          text-align: center;
+          color: #fff;
+      }
+
+      #myFooter a {
+          color: #d2d1d1;
+          text-decoration: none;
+      }
+
+      #myFooter a:hover,
+      #myFooter a:focus {
+          text-decoration: none;
+          color: white;
+      }
+
+
+#myFooter .social-networks {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+    font-size: 32px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+    text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+    color: #0d47a1;
+}
+
+#myFooter .google:hover {
+    color:  #0d47a1;
+}
+
+#myFooter .twitter:hover {
+    color: #1976d2;
+}
+
+#myFooter .btn {
+    color: white;
+    background-color: #d84b6b;
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+}
+
+      .over{
+        background-color: #0E49AC;
+        width: 100%;
+        height: 150px;
+        display: inline-block;
+        margin: 0px;
+        margin-top: -185px;
+      }
+
+      .over1{
+        margin-top: -35px;
+      }
+      .header{
+        background-color: transparent;
+        position: absolute;
+        text-align: center;
+        z-index: 999;
+        width: 100%;
+        /*position: absolute;*/
+        display: grid;
+        grid-template-columns: 5% auto auto 10%;
+      }
+
+      .logo{
+        grid-column: 2/3;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .logo a{
+        color: white;
+      }
+
+      .header nav{
+        display: flex;
+        /*background: red;*/
+        grid-column: 3/4;
+        justify-content: flex-end;
+
+
+      }
+
+      .header nav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+      }
+      .header ul li{
+        margin-left: 2em;
+        margin-top: 0.5em;
+        padding: 1em;
+        display: inline-block;
+      }
+
+      .header ul li a{
+        font-size: 1.2rem;
+        padding: 1em;
+        color: white;
+        font-size: 15px;
+      }
+
+
+      .header ul li a:hover{
+        /*border-top: 7px solid yellow;*/
+        color: #89BF24;
+
+        border-radius: 10%;
+        padding: 1.4em 1em;
+        transition-duration:0.3s;
+        transition-timing-function: linear;
+        text-decoration: none;
+        border-bottom-style: solid;
+      }
+      .front{
+        margin-top: 24em;
+      }
+      .banner{
+        grid-column: 1/4;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .banner .image-holder img{
+        width: 100%;
+        height: 37em;
+      }
+
+      .banner .text-holder{
+        position: absolute;
+        height: 100%;
+        width: 45%;
+        top: 0;
+        right: 25%;
+        display: inline-block;
+        margin: 0px;
+        overflow:hidden;
+        font-size: 20px;
+        background-color: rgba(145, 132, 94,0.5);
+        color: white;
+        z-index: 20;
+        text-align: center;
+        padding: 1em;
+      }
+
+
+      .banner .text-holder .text{
+        height: 45em;
+      }
+
+      .banner .text-holder .image img{
+        width: 100%;
+        height: 25em;
+        margin-bottom: 30px;
+        opacity: 0.9;
+      }
+
+      #front{
+        background: none;
+      }
+
+      #title{
+        background: none;
+      }
+
+
+    </style>
+
+
+  </head>
+
+  <body>
+      <div class="main">
+       <!--  <div class="image">
+          <img src="/images/img8.jpg">
+        </div> -->
+            <div class="main-wrapper">
+              <div class="header">
+                <div class="logo">
+                   <div class="col-sm-3" style="opacity: 0.7"><br>
+                   <img id="profile-img" class="profile-img-card" src="./images/logo.jpg" />
+                </div>
+                </div>
+                <nav>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="/login">Sign In</a></li>
+                  <li><a href="/signup">Sign Up</a></li>
+                </ul>
+                </nav>
+              </div>
+              <div class="main-body">
+                <div class="banner">
+                  <div class="image-holder">
+                    <img src="/images/img8.jpg">
+                  </div>
+
+                </div>
+        <div class="logo-holder">
+          <div class="title" style="margin-left: 800px;">
+          <h1 style="font-family:Segoe Print ; font-size: 50px;" >Aajai </h1>
+          </div>
+          <div class="text" style="margin-left: 725px;">
+          <h6 style="font-size: 15px;">MAKE YOUR TODAY COUNT.</h6>
+          </div>
+        </div>
+
+            <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"><br>
+<!--                    <img id="profile-img" class="profile-img-card" src="./images/logo.jpg" />
+ -->                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/signup">Sign up</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="http://wlit.org.np/">Company Information</a></li>
+                        <li><a href="#">Reviews</a></li>
+
+                    </ul>
+                </div>
+                 <div class="col-sm-3">
+                    <h5>Contact us</h5>
+                    <ul>
+                        <li><i class="fa fa-phone-square"> Call: +977-9842173880 </i></li>
+                        <li><i class="fa fa-envelope"> Send email wlitnepal@gmail.com</i></li>
+                         </ul>
+                        <div class="social-networks">
+                        <a href="https://twitter.com/wlitnepal" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/wlitnepal/?ref=br_rs" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="http://wlit.org.np/" class="google"><i class="fa fa-internet-explorer"></i></a>
+                        </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2019 WLiT Bootcamp </p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         </div>
+
+
+  </body>
+</html>

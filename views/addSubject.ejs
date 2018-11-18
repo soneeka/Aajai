@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<htm>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Aaja</title>
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Aajai</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/addSubject">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/adminView">View</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container container-table">
+      <div class="row vertical-center-row" style="margin-top:20px;">
+        <div class="col-md-3"></div><br>
+        <div class="text-center col-md-6">
+          <form class="" method="post" action="/addSubject">
+            Select the Faculty&nbsp&nbsp&nbsp
+            <select name="faculty">
+              <option value="BCT">BCT</option>
+              <option value="BEX">BEX</option>
+            </select><br><br>
+            Select the Semester&nbsp&nbsp
+            <select name="sem">
+              <option value="1">First</option>
+              <option value="2">Second</option>
+              <option value="3">Third</option>
+              <option value="4">Fourth</option>
+              <option value="5">Fifth</option>
+              <option value="6">Sixth</option>
+              <option value="7">Seventh</option>
+              <option value="8">Eighth</option>
+            </select><br><br>
+            <label>Subject Name : </label> <input type="text" name="subName"><br><br>
+            <label>Subject Code : &nbsp</label> <input type="text" name="subCode"><br><br>
+            <label>Number of Chapters : </label> <input type="number" name="numOfChapters"><br><br>
+            <button class="btn btn-success btn-block" type="submit">Add Subject</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<htm>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Aajai</title>
+    <link rel="icon" href="/images/logo.jpg" />
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+    .image img{
+        width: 100%;
+        height: 42em;
+     }
+     .text-holder{
+          position: absolute;
+          height: 100%;
+          width: 35%;
+          top: 0%;
+          right: 15%;
+          display: inline-block;
+          margin: 0px;
+          overflow:hidden;
+          font-size: 17px;
+          background-color: rgba(232, 228, 225,0.5);
+          color: #1ab2ba;
+          z-index: 20;
+          text-align: center;
+          padding: 1em;
+          font-weight: bold;
+        }
+
+    </style>
+
+
+  </head>
+
+  <body>
+    <div class="main-banner">
+    <div class="main">
+        <div class="image">
+          <img src="/images/img7.jpg">
+        </div>
+        <div class="text-holder">
+        <div class="container container-table">
+          <div class="row vertical-center-row" style="margin-top:220px;">
+            <div class="col-md-3"></div>
+
+            <div class="text-center col-md-6">
+              <h3>Welcome <%= user.username %> !!</h3>
+              <form class="text-form" method="post" action="/setProfile">
+                Select the Faculty&nbsp&nbsp&nbsp
+                <select name="faculty">
+                  <option value="BCT">BCT</option>
+                  <option value="BEX">BEX</option>
+                </select><br><br>
+                Select the Semester&nbsp&nbsp
+                <select name="sem">
+                  <option value="1">First</option>
+                  <option value="2">Second</option>
+                  <option value="3">Third</option>
+                  <option value="4">Fourth</option>
+                  <option value="5">Fifth</option>
+                  <option value="6">Sixth</option>
+                  <option value="7">Seventh</option>
+                  <option value="8">Eighth</option>
+                </select><br><br>
+                Exam Date : <input type="date" name="deadline"><br><br>
+                <input type="hidden" name="_id" value="<%= user._id %>">
+                <button class="btn btn-success btn-block" type="submit">Set Profile</button>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+  </body>
+</html>

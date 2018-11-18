@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<htm>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Aaja</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Aaja</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/addSubject">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/adminView">View</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container container-table">
+      <div class="row vertical-center-row" style="margin-top:20px;">
+        <div class="col-md-3"></div><br>
+        <div class="text-center col-md-6">
+          <form method="post" action="/saveEdited">
+            <% var num;
+            chapters.forEach(function(chapter,i){ %>
+              <p><strong>Chapter <% ++i %> </strong></p>
+              <input type="hidden" name="_id" value="<%= chapter._id %>">
+              Name : <input type="text" name="chapterName" value="<%= chapter.chapterName %>"><br><br>
+              Hours : <input type="number" name="hours" value="<%= parseInt(chapter.hours) %>"><br><br>
+              Marks : <input type="number" name="marks" value="<%= parseInt(chapter.marks) %>"><br><br><hr>
+            <% num = i; }) %>
+            <input type="hidden" name="num" value="<%= num %>">
+            <button type="submit">Done</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<htm>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Aaja</title>
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Aajai</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/addSubject">Add</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/adminView">View</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container container-table">
+      <div class="row vertical-center-row" style="margin-top:20px;">
+        <div class="col-md-1"></div><br>
+        <div class="text-center col-md-10">
+          <h1>BCT</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Sem</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Number Of Chapters</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% subjects.forEach(function(subject,i){
+                if(subject.faculty == "BCT"){%>
+                <tr>
+                  <td><%= subject.sem %></td>
+                  <td><%= subject.subjectName %></td>
+                  <td><%= subject.subjectCode %></td>
+                  <td><%= subject.numOfChapters %></td>
+                  <td></td>
+                  <th scope="col">
+                    <a href="/viewChapters/<%= subject.subjectCode %>"><button>View</button></a>
+                  </th>
+                </tr>
+              <%} }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

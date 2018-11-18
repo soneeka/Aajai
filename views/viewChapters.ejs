@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<htm>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Aaja</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Aaja</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/addSubject">Add</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/adminView">View</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container container-table">
+      <div class="row vertical-center-row" style="margin-top:20px;">
+        <div class="col-md-1"></div><br>
+        <div class="text-center col-md-10">
+          <a href="/editSubject/<%= subjectCode %>">
+            <button class="btn btn-danger" style="float : right; margin-bottom:5px;">Edit Subject</button>
+          </a>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Hours</th>
+                <th scope="col">Marks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% chapters.forEach(function(chapter,i){ %>
+                <tr>
+                  <td><%= ++i %></td>
+                  <td><%= chapter.chapterName %></td>
+                  <td><%= chapter.hours %></td>
+                  <td><%= chapter.marks %></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
